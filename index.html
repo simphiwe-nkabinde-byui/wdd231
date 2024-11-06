@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 Course home page">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <title>WDD231 | Course Home Page</title>
+    <script src="scripts/getDates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="" alt="">
+        <h1>Simphiwe Nkabinde</h1>
+        <button id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+    </header>
+    <nav id="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Chamber</a>
+            </li>
+            <li>
+                <a href="">GitHub Profile</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/simphiwe-nkabinde-a07b311b9/">LinkedIn</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Course Work</h2>
+        </section>
+        <section>
+            <h2>Toloria, Madagascar</h2>
+        </section>
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+            <p>required credits: <span id="credits"></span></p>
+            <div>
+                <button id="filter-all">All</button>
+                <button id="filter-cse">CSE</button>
+                <button id="filter-wdd">WDD</button>
+            </div>
+            <ul id="course-list">
+
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Simphiwe Nkabinde | South Africa</p>
+        <p>Last Update: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
