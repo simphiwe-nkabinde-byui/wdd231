@@ -7,57 +7,70 @@
     <meta name="description" content="WDD231 Course home page">
     <meta name="author" content="Simphiwe Nkabinde">
     <title>WDD231 | Course Home Page</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="scripts/getDates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/courses.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <img src="" alt="">
-        <h1>Simphiwe Nkabinde</h1>
-        <button id="menu-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
-        </button>
-    </header>
-    <nav id="navigation">
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="#">Chamber</a>
-            </li>
-            <li>
-                <a href="">GitHub Profile</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/simphiwe-nkabinde-a07b311b9/">LinkedIn</a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>Course Work</h2>
-        </section>
-        <section>
-            <h2>Toloria, Madagascar</h2>
-        </section>
-        <section>
-            <h2>Web and Computer Programming Certificate</h2>
-            <p>required credits: <span id="credits"></span></p>
-            <div>
-                <button id="filter-all">All</button>
-                <button id="filter-cse">CSE</button>
-                <button id="filter-wdd">WDD</button>
-            </div>
-            <ul id="course-list">
-
+    <div>
+        <header>
+            <img src="images/me.webp" width="50" height="50" loading="lazy" alt="Portrait of Simphiwe Nkabinde">
+            <h1>Simphiwe Nkabinde</h1>
+            <button id="menu-button" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+        </header>
+        <nav id="navigation">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#">Chamber</a>
+                </li>
+                <li>
+                    <a href="">GitHub Profile</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/simphiwe-nkabinde-a07b311b9/">LinkedIn</a>
+                </li>
             </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="section-card">
+            <h2>Course Work</h2>
+            <div class="card-body"></div>
+        </section>
+        <section class="section-card">
+            <h2>Toloria, Madagascar</h2>
+            <div class="card-body"></div>
+        </section>
+        <section class="section-card">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="card-body">
+                <p class="required-credits">required credits: <span id="credits"></span></p>
+                <div class="course-filters">
+                    <button id="filter-all">All</button>
+                    <button id="filter-cse">CSE</button>
+                    <button id="filter-wdd">WDD</button>
+                </div>
+                <ul id="course-list">
+
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
