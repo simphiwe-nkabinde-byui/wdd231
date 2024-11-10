@@ -84,7 +84,7 @@ const courses = [
     }
 ]
 
-credits.textContent = courses.reduce((accumulator, currentValue) => accumulator + currentValue.credits, 0)
+
 
 let filteredCourseList = courses
 
@@ -112,6 +112,11 @@ function renderCourseList() {
 
         courseListElement.append(li);
     })
+    setTotalCredits()
+}
+
+function setTotalCredits() {
+    credits.textContent = filteredCourseList.reduce((accumulator, currentValue) => accumulator + currentValue.credits, 0)
 }
 renderCourseList()
 
