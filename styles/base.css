@@ -42,6 +42,14 @@ header img {
     color: var(--light);
 }
 
+#menu-button[aria-expanded="true"] .icon-list {
+    display: none;
+}
+
+#menu-button[aria-expanded="false"] .icon-x {
+    display: none;
+}
+
 @media (min-width: 768px) {
     header {
         justify-content: center;
@@ -61,12 +69,14 @@ header img {
 /* ------NAV------ */
 nav {
     background-color: var(--dark);
-    display: none;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .3s ease-out;
 }
 
 
 nav.open {
-    display: block;
+    grid-template-rows: 1fr;
 }
 
 nav ul {
@@ -74,6 +84,7 @@ nav ul {
     padding: 0 .8rem;
     text-align: center;
     background-color: var(--secondary-bg-light);
+    overflow: hidden;
 }
 
 nav li {
