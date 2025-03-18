@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Hamba Tech Solutions",
+      "address": "123 Innovation Street, Sandton, Gauteng, South Africa",
+      "phoneNumber": "+27 11 555-1234",
+      "websiteUrl": "https://www.hambatechsolutions.co.za",
+      "imageName": "hamba_tech_solutions_logo.webp",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Global Trade Africa",
+      "address": "456 Business Avenue, Johannesburg, Gauteng, South Africa",
+      "phoneNumber": "+27 11 987-6543",
+      "websiteUrl": "https://www.globaltradeafrica.com",
+      "imageName": "global_trade_logo.webp",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Mango Data Analytics",
+      "address": "789 Data Road, Pretoria, Gauteng, South Africa",
+      "phoneNumber": "+27 12 555-9876",
+      "websiteUrl": "https://www.mangodataanalyticssa.co.za",
+      "imageName": "mango_data_analytics_icon.webp",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Soft Brick Solutions ",
+      "address": "101 Code Lane, Centurion, Gauteng, South Africa",
+      "phoneNumber": "+27 12 111-2233",
+      "websiteUrl": "https://www.softbricksolutions.com",
+      "imageName": "soft_brick_logo.webp",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Retail Dynamics",
+      "address": "202 Market Square, Johannesburg, Gauteng, South Africa",
+      "phoneNumber": "+27 11 444-5566",
+      "websiteUrl": "https://www.retaildynamics.co.za",
+      "imageName": "retail_dynamics_logo.webp",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Cloud Services SA",
+      "address": "303 Cloud Park, Midrand, Gauteng, South Africa",
+      "phoneNumber": "+27 11 777-8899",
+      "websiteUrl": "https://www.cloudservicesa.com",
+      "imageName": "cloud_services_logo.webp",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Precision Engineering",
+      "address": "404 Industrial Road, Germiston, Gauteng, South Africa",
+      "phoneNumber": "+27 11 222-3344",
+      "websiteUrl": "https://www.precisionengineering.co.za",
+      "imageName": "precision_engineering_logo.webp",
+      "membershipLevel": 3
+    }
+  ]

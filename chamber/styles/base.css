@@ -1,0 +1,215 @@
+:root {
+    --white: #ffffff;
+    --black: #222831;
+    --dark: #393E46;
+    --grey: #EEEEEE;
+    --oxford-blue: #002855;
+    --yale-blue: #023e7d;
+    --true-blue: #0466C8;
+    --argentinian-blue: #75BAFF;
+    --orange: #eb5e28;
+    --anti-flash-white: #eef0f1;
+    --platinum: #e2e4e8;
+    --french-gray: #C4C8D1
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    background: var(--yale-blue);
+    color: var(--white);
+    padding: 0 1rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px 1px #2d2d2d57;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+}
+
+.brand img {
+    width: 40px;
+    height: auto;
+}
+
+.brand .title {
+    font-weight: 700;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.brand .slogan {
+    display: block;
+    font-size: .8rem;
+}
+
+#menu-btn {
+    border: none;
+    color: var(--white);
+    background: transparent;
+    cursor: pointer;
+}
+
+#menu-btn[aria-expanded="true"] .icon-list {
+    display: none;
+}
+
+#menu-btn[aria-expanded="false"] .icon-x {
+    display: none;
+}
+
+
+header nav {
+    position: absolute;
+    background: var(--oxford-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    transition: grid-template-rows .3s ease-out;
+    top: 70px;
+    left: 0;
+    overflow: hidden;
+}
+
+header nav.open {
+    transition: grid-template-rows .3s ease-out;
+    height: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--white);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding: .3rem 1rem;
+}
+
+header nav a.active {
+    border-color: var(--orange);
+}
+
+header nav a:hover {
+    background: var(--true-blue);
+}
+
+/* MAIN */
+main {
+    /* max-width: 80vw; */
+    margin: 3rem 5%;
+}
+
+.page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+
+.page-head .page-title {
+    font-size: 1.5rem;
+    color: var(--oxford-blue);
+}
+
+.display-toggles button {
+    background: transparent;
+    border-radius: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--grey);
+    color: var(--grey);
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+#display-style-grid.active {
+    color: var(--argentinian-blue);
+    border-color: var(--argentinian-blue);
+}
+
+#display-style-list.active {
+    color: var(--argentinian-blue);
+    border-color: var(--argentinian-blue);
+}
+
+#card-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#card-list.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+#card-list.list li {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    padding: .3rem 1rem;
+}
+
+#card-list.list li:nth-child(odd) {
+    background: #f1f8ff;
+}
+
+#card-list.grid li {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 15px 5px 25px 5px;
+    border-radius: 3px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #67676757;
+}
+
+#card-list li img {
+    max-height: 50px;
+}
+
+#card-list.list li h2 {
+    font-size: .75rem;
+}
+
+#card-list.list li p {
+    font-size: .5rem;
+}
+
+#card-list li a {
+    text-decoration: none;
+    color: var(--true-blue);
+}
+
+#card-list.list li a {
+    font-size: .5rem;
+}
+
+/* FOOTER */
+footer {
+    background: var(--yale-blue);
+    color: var(--anti-flash-white);
+    text-align: center;
+    padding: .8rem;
+    border-top: 2px solid var(--orange);
+    font-size: .8rem;
+}
