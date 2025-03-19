@@ -1,5 +1,5 @@
 const url = '/chamber/data/members.json';
-const membersList = document.querySelector('#card-list');z
+const membersList = document.querySelector('#card-list');
 
 async function getMembers(params) {
     const response = await fetch('/chamber/data/members.json');
