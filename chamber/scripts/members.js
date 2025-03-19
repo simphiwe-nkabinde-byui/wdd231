@@ -1,6 +1,5 @@
 const url = '/chamber/data/members.json';
-const membersList = document.querySelector('#card-list');
-
+const membersList = document.querySelector('#card-list');z
 
 async function getMembers(params) {
     const response = await fetch('/chamber/data/members.json');
@@ -28,8 +27,6 @@ const displayMembers = (members) => {
         logo.setAttribute('height', '50');
         webLink.setAttribute('href', member.websiteUrl)
         webLink.textContent = 'visit website'
-        // portrait.setAttribute('width', 655 / 6);
-        // portrait.setAttribute('height', 812 / 6);
 
         memberContainer.appendChild(logo);
         memberContainer.appendChild(name);
