@@ -112,15 +112,7 @@ main {
     margin: 3rem 5%;
 }
 
-.page-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-}
-
-
-.page-head .page-title {
+.page-title {
     font-size: 1.5rem;
     color: var(--oxford-blue);
 }
@@ -134,6 +126,7 @@ main {
     color: var(--grey);
     aspect-ratio: 1;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 #display-style-grid.active {
