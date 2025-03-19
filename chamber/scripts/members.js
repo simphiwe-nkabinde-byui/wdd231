@@ -2,7 +2,7 @@ const url = '/wdd231/chamber/data/members.json';
 const membersList = document.querySelector('#card-list');
 
 async function getMembers(params) {
-    const response = await fetch('/chamber/data/members.json');
+    const response = await fetch(url);
     const data = await response.json();
     displayMembers(data);
 }
