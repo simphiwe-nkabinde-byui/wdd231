@@ -201,8 +201,13 @@ main {
 footer {
     background: var(--yale-blue);
     color: var(--anti-flash-white);
-    text-align: center;
-    padding: .8rem;
+    padding: .8rem 5%;
     border-top: 2px solid var(--orange);
     font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .address {
+    /* text-align: ; */
 }
