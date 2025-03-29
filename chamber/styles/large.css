@@ -36,6 +36,10 @@
         height: 300px;
     }
 
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
     #card-list.list li {
         grid-template-columns: repeat(5, 1fr);
         column-gap: 1.5rem;

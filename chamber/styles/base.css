@@ -249,12 +249,16 @@ main {
     row-gap: 1rem;
 }
 
+.hero-content h2 {
+    font-size: 1.5rem;
+}
+
 .hero-content .cta-btn {
     text-decoration: none;
     padding: .5rem 1rem;
-    background: var(--orange);
+    background: var(--yale-blue);
+    border: 2px solid var(--orange);
     border-radius: 5px;
-    border: none;
     color: var(--white);
     cursor: pointer;
 }
