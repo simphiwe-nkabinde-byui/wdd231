@@ -240,6 +240,25 @@ main {
     aspect-ratio: 1;
 }
 
+.forecast-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.forecast-list li {
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.forecast-list .weather-icon {
+    background: var(--orange);
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
 #spotlights {
     list-style: none;
     padding-left: 0;

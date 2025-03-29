@@ -1,3 +1,4 @@
+const weeksDays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 const lat = -26.14
 const lon = 28.42
 const apiKey = '36d682e19df5d55ae8ea9cb18436acbd'
@@ -25,9 +26,23 @@ async function getWeatherForecast(params) {
         const response = await fetch(url)
         if (response.ok) {
             const data = await response.json();
-            // console.log(data);
-            // console.log(data.list.map(item => (new Date(item.dt_txt))));
-            // displayWeatherForecast(data);
+            const fullForecast = data.list.map(item => {
+                return {
+                    day: new Date(item.dt_txt).getDay(),
+                    icon: item.weather[0].icon,
+                    temp: item.main.temp,
+                    description: item.weather[0].description
+                }
+            });
+            // get single forecast for each day
+            let uniqueForecast = fullForecast.filter((e, i, self) => i === self.findIndex((item) => item.day === e.day));
+
+            // convert day index to day name
+            uniqueForecast.forEach(item => {
+                item.day = weeksDays[item.day]
+            });
+            uniqueForecast.splice(3)
+            displayWeatherForecast(uniqueForecast);
         } else {
             const errResponse = await response.json();
             throw Error(errResponse.message)
@@ -39,7 +54,16 @@ async function getWeatherForecast(params) {
 }
 
 function displayWeatherForecast(data) {
-    
+    const html = data.map(day => `
+        <li>
+            <span>${day.day}:</span>
+            <span>${day.temp}&deg;C</span>
+            <img width='25' class='weather-icon' src='https://openweathermap.org/img/wn/${day.icon}.png' alt='${day.description}'/>
+        </li>
+    `).join('');
+
+    const container = document.querySelector('#weather-forecast .info-card-body');
+    container.innerHTML = `<ul class='forecast-list'>${html}</ul>`
 }
 function displayCurrentWeather(data) {
     const html = `
@@ -51,7 +75,7 @@ function displayCurrentWeather(data) {
             <span>Humidity: ${data.main.humidity}%</span>
             <span>Sunrise: ${new Date(data.sys.sunrise).toLocaleTimeString()}</span>
             <span>Sunset: ${new Date(data.sys.sunset).toLocaleTimeString()}</span>
-    `
+    `;
     const container = document.querySelector('#weather-current .info-card-body');
     container.innerHTML = html
 

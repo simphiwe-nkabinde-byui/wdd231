@@ -1,4 +1,4 @@
-const url = '/chamber/data/members.json';
+const url = '/wdd231/chamber/data/members.json';
 const membersList = document.querySelector('#card-list');
 const membershipLevels = {
     '1': 'Gold',
@@ -8,8 +8,6 @@ const membershipLevels = {
 async function getMembers() {
     
     const response = await fetch(url);
-    console.log(response);
-    
     const data = await response.json();
     displayMembers(data);
     displaySpotlights(data)
