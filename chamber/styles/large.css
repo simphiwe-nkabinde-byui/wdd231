@@ -52,4 +52,15 @@
         font-size: .9rem;
     }
 
+    #info-sect {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: .5rem;
+        row-gap: 0;
+    }
+
+    #info-sect .info-card-body {
+        height: 100%;
+    }
+
 }
