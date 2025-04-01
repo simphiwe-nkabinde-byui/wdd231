@@ -3,6 +3,7 @@ const filterCseBtn = document.querySelector("#filter-cse");
 const filterWddBtn = document.querySelector("#filter-wdd");
 const courseListElement = document.querySelector("#course-list");
 const credits = document.querySelector("#credits");
+const dialog = document.querySelector('dialog');
 
 const courses = [
     {
@@ -109,7 +110,7 @@ function renderCourseList() {
         if (course.completed) {
             li.className = "completed"
         }
-
+        li.addEventListener('click', () => displayCourseModal(course))
         courseListElement.append(li);
     })
     setTotalCredits()
@@ -118,5 +119,19 @@ function renderCourseList() {
 function setTotalCredits() {
     credits.textContent = filteredCourseList.reduce((accumulator, currentValue) => accumulator + currentValue.credits, 0)
 }
+function displayCourseModal(course) {
+    const html = `
+        <form class='close' method='dialog'><button>❌</button></form>
+        <div class='head'>${course.subject} ${course.number}</div>
+        <p class='title'>${course.title}</p>
+        <p>Credits: ${course.credits}</p>
+        <p>Certificate: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p>Technology: ${course.technology}</p>
+    `
+    dialog.innerHTML = html;
+    dialog.showModal();
+}
+dialog.addEventListener('focusout', () => dialog.close())
 renderCourseList()
 
