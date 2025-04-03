@@ -276,7 +276,7 @@ main {
 }
 
 #info-sect .info-card-head {
-    background: var(--true-blue);
+    background: var(--yale-blue);
     color: var(--white);
     padding: .2rem .5rem;
     font-weight: 600;
