@@ -71,4 +71,30 @@
         height: 100%;
     }
 
+    form.join-form input,
+    form.join-form textarea,
+    form.join-form select {
+        width: 250px;
+    }
+
+    #membership-list {
+        width: 350px;
+    }
+
+    .join-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    dialog .close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+
+    dialog .close button {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
 }

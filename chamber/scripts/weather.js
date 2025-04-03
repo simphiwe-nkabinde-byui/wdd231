@@ -54,6 +54,8 @@ async function getWeatherForecast(params) {
 }
 
 function displayWeatherForecast(data) {
+    const container = document.querySelector('#weather-forecast .info-card-body');
+    if (!container) return;
     const html = data.map(day => `
         <li>
             <span>${day.day}:</span>
@@ -62,10 +64,11 @@ function displayWeatherForecast(data) {
         </li>
     `).join('');
 
-    const container = document.querySelector('#weather-forecast .info-card-body');
     container.innerHTML = `<ul class='forecast-list'>${html}</ul>`
 }
 function displayCurrentWeather(data) {
+    const container = document.querySelector('#weather-current .info-card-body');
+    if (!container) return;
     const html = `
             <img width='65' class='weather-icon' src='https://openweathermap.org/img/wn/${data.weather[0].icon}.png' alt='${data.weather[0].description}'/>
             <span>${data.weather[0].description}</span>
@@ -76,7 +79,6 @@ function displayCurrentWeather(data) {
             <span>Sunrise: ${new Date(data.sys.sunrise).toLocaleTimeString()}</span>
             <span>Sunset: ${new Date(data.sys.sunset).toLocaleTimeString()}</span>
     `;
-    const container = document.querySelector('#weather-current .info-card-body');
     container.innerHTML = html
 
 }

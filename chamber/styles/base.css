@@ -124,6 +124,12 @@ footer {
     color: var(--oxford-blue);
 }
 
+.page-intro {
+    font-size: .9rem;
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+
 /* DIRECTORY MAIN */
 main {
     /* max-width: 80vw; */
@@ -331,4 +337,202 @@ main {
     box-shadow: 0px 0px 10px #67676757;
     font-size: .8rem;
     background: var(--white);
+}
+
+.join-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+
+form.join-form,
+.join-section .membership-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.join-section h2 {
+    font-size: 1.2rem;
+    color: var(--true-blue);
+}
+
+form.join-form label {
+    font-size: .9rem;
+    color: var(--black);
+}
+
+form.join-form label>* {
+    display: block;
+}
+
+form.join-form select {
+    display: block;
+    padding: .2rem .4rem;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+    border-left-width: 5px;
+    border-left-color: #555;
+    font-size: 1rem;
+    color: #3D405B;
+    width: 100%;
+}
+
+form.join-form input,
+form.join-form textarea {
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+    padding: .2rem .4rem;
+    width: 100%;
+}
+
+form.join-form input:required,
+form.join-form textarea:required {
+    border-left-color: #cc0000a7;
+    border-left-width: 4px;
+}
+
+form.join-form input:focus,
+form.join-form textarea:focus {
+    border-left-color: black;
+    outline: none;
+    box-shadow: 0px 0px 2px 1px var(--argentinian-blue);
+    border-left-width: 4px;
+}
+
+form.join-form input:required:valid,
+form.join-form textarea:required:valid {
+    border-left-color: rgba(1, 126, 1, 0.566);
+    border-left-width: 4px;
+}
+
+form.join-form button {
+    margin-right: auto;
+    background: var(--true-blue);
+    border-radius: 5px;
+    border: none;
+    color: var(--white);
+    padding: .3rem 1rem;
+    font-weight: 700;
+}
+
+::backdrop {
+    background: rgba(0, 0, 0, 0.323);
+}
+
+dialog {
+    border-radius: .3rem;
+    width: 500px;
+    max-width: 90vw;
+    max-height: 80vh;
+    margin: auto;
+    border: none;
+    animation: fade-in .4s ease-in-out;
+    text-align: center;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        translate: 0px -30px;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0px 0px;
+    }
+}
+
+dialog .head {
+    text-align: center;
+    background: var(--true-blue);
+    color: var(--white);
+    padding: .5rem 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
+}
+
+dialog .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+dialog .close button {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: .9rem;
+    color: var(--grey);
+}
+
+dialog ul {
+    text-align: left;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+#membership-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    width: 100%;
+}
+
+#membership-list li {
+    background: var(--true-blue);
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: var(--white);
+    box-shadow: 0px 0px 14px 1px #0000006e;
+}
+
+#membership-list li:nth-child(odd) {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+#membership-list li:nth-child(even) {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        translate: 70px 0px;
+    }
+
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        translate: -70px 0px;
+    }
+
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+#membership-list li h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#membership-list li button {
+    border: none;
+    background: var(--white);
+    border-radius: 5px;
+    margin-top: .7rem;
+    padding: .2rem .6rem;
+    font-size: .9rem;
+    cursor: pointer;
 }

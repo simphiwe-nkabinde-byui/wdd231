@@ -13,21 +13,21 @@ async function apiFetch() {
         const response = await fetch(url)
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
-            
             displayResults(data);
         } else {
             throw Error(await response.text())
         }
     } catch (error) {
-        console.log({error});
+        console.log(error);
     }
 }
 
 function displayResults(data) {
-    weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
-    weatherIcon.alt = description
-    currTemp.innerHTML = `${data.main.temp} &deg;C`
-    caption.textContent = data.weather[0].description
+    if (weatherIcon) {
+        weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        weatherIcon.alt = description;
+    }
+    if (currTemp) currTemp.innerHTML = `${data.main.temp} &deg;C`;
+    if (caption) caption.textContent = data.weather[0].description;
 }
 apiFetch();

@@ -7,10 +7,17 @@ const membershipLevels = {
 }
 async function getMembers() {
     
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
-    displaySpotlights(data)
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        displayMembers(data);
+        displaySpotlights(data);
+    
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+
 }
 
 getMembers();

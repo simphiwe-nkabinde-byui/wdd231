@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory Page for the chamber of commerce site">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <title>Chamber of Commerce Directory</title>
+    <meta property="og:title" content="Chamber Directory Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://mybroadband.co.za/news/wp-content/uploads/2023/05/Johannesburg-skyline-.jpg">
+    <meta property="og:url" content="https://simphiwe-nkabinde-byui.github.io/wdd231/chamber">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/get-dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/membership.js" defer></script>
+    <script src="scripts/timestamp.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/logo.webp" width="50" height="50" loading="lazy" alt="Portrait of Simphiwe Nkabinde">
+            <div>
+                <span class="title">Vutha</span>
+                <span class="slogan">Chamber of Commerce</span>
+            </div>
+        </div>
+
+        <button id="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="icon-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="icon-x"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </button>
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a class="active" href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Join</h1>
+        <p class="page-intro">Become a member of the Vutha Chamber of Commerce</p>
+
+        <section class="join-section">
+            <form class="join-form" method="GET" action="thankyou.html">
+                <h2>Membership Application Form</h2>
+                <label>
+                    First Name
+                    <input type="text" required name="firstname" title="Your First Name" autocomplete="given-name">
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" required name="lastname" title="Your Last Name" autocomplete="family-name">
+                </label>
+                <label>
+                    Organisational Title
+                    <input type="text" required name="organisation-title" title="Your title within you Organisation"
+                        autocomplete="organisation-title">
+                </label>
+                <label>
+                    Email
+                    <input type="email" required name="email" title="Your email" placeholder="john@example.com"
+                        autocomplete="email">
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" required name="phone" title="Your mobile phone number" autocomplete="tel">
+                </label>
+                <label>
+                    Business/Organisation name
+                    <input type="text" required name="organisation-name" title="Your organisation's name"
+                        autocomplete="organisation">
+                </label>
+                <label>
+                    Membership Level
+                    <select name="membership-level" title="choose a membership level" required>
+                        <option value="np">Non-profit (no fee)</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+                <label>
+                    Description
+                    <textarea name="description" required title="Your organisation's description"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit">Submit</button>
+            </form>
+            <div class="membership-info">
+                <h2>Membership Levels</h2>
+                <ul id="membership-list"></ul>
+            </div>
+        </section>
+        <dialog></dialog>
+    </main>
+    <footer>
+        <p class="address">
+            <strong>Vutha Chmaber of Commerce</strong> <br>
+            318 Blue Wall street <br>
+            Multon <br>
+            Johannesburg <br>
+            20033
+        </p>
+        <p class="dev-info">
+            &copy; <span id="currentyear"></span> <br>
+            Simphiwe Nkabinde <br>
+            WDD 231 <br>
+            Last Update: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>
