@@ -1,5 +1,5 @@
 const dialog = document.querySelector('dialog');
-const url = '/wdd231/chamber/data/interest-areas.json'
+const url = '/chamber/data/interest-areas.json'
 
 async function showPlaces() {
     try {
@@ -29,7 +29,7 @@ function renderPlaceCards(data) {
 
         // figure
         const figure = document.createElement('figure');
-        figure.innerHTML = `<img loading=-"lazy" src="images/${item.imageName}.webp" width="300" height="200" alt="${item.name}">`;
+        figure.innerHTML = `<img loading="lazy" src="images/${item.imageName}.webp" width="300" height="200" alt="${item.name}">`;
         li.append(figure)
 
         // address
