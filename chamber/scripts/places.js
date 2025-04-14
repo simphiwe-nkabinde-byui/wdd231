@@ -1,5 +1,5 @@
 const dialog = document.querySelector('dialog');
-const url = '/chamber/data/interest-areas.json'
+const url = '/wdd231/chamber/data/interest-areas.json'
 
 async function showPlaces() {
     try {
