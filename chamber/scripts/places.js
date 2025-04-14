@@ -1,4 +1,3 @@
-const dialog = document.querySelector('dialog');
 const url = '/chamber/data/interest-areas.json'
 
 async function showPlaces() {
@@ -13,7 +12,6 @@ async function showPlaces() {
     }
 
 }
-
 function renderPlaceCards(data) {
 
     const container = document.querySelector('#interest-areas')
@@ -45,7 +43,6 @@ function renderPlaceCards(data) {
         // button
         const btn = document.createElement('button');
         btn.textContent = 'learn more';
-        btn.addEventListener('click', () => dialog.showModal());
         li.append(btn)
 
         container.appendChild(li)
@@ -55,5 +52,4 @@ function renderPlaceCards(data) {
 }
 
 showPlaces()
-dialog.addEventListener('focusout', () => dialog.close())
 
