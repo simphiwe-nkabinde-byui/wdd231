@@ -1,0 +1,27 @@
+@media (min-width: 641px) and (max-width: 1024px) {
+    #interest-areas li {
+        row-gap: .5rem;
+        column-gap: 1rem;
+        grid-template-areas:
+            "image name"
+            "image address"
+            "image description"
+            "image button"
+        ;
+    }
+
+    #interest-areas li h2 {
+        margin-top: .8rem;
+    }
+
+    #interest-areas li button {
+        height: 2rem;
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    #interest-areas li figure img {
+        height: 100%;
+        width: auto;
+    }
+}

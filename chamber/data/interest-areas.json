@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Daveyton Mall",
+        "address": "Cnr Turton &, Eiselen St, Daveyton, Benoni, 1520",
+        "description": "a shopping destination for easy and convenient shopping with more than 60 stores. The 20, 174m² Mall offers shoppers free parking and well-known retail outlets seven days a week",
+        "imageName": "daveyton-mall"
+    },
+    {
+        "name": "Benoni City Hall",
+        "address": " Princes Ave, Benoni, 1500",
+        "description": "A prominent example of Art Deco architecture, was built in 1937. It is located at the corner of Tom Jones street and Elston Avenue in Benoni. The city hall is now part of the City of Ekurhuleni Metropolitan Municipality.",
+        "imageName": "benoni-city-hall"
+    },
+    {
+        "name": "Lakeside Mall",
+        "address": "18b Tom Jones St, Benoni, 1501",
+        "description": "Nestled along the scenic Civic Lake in Benoni, Lakeside Mall is a regional shopping hub with a unique, steamboat-inspired design.",
+        "imageName": "lakeside-mall"
+    },
+    {
+        "name": "Sibikwa Arts Centre",
+        "address": "13 Liverpool Rd, Benoni South, Benoni, 1501",
+        "description": "An award-winning multi-disciplinary Centre of Excellence in South Africa that leverages the performing arts for advancement",
+        "imageName": "sibikwa-arts-centre"
+    },
+    {
+        "name": "Bunny Park",
+        "address": "80 Pretoria Rd, Rynfield, Benoni, 1514",
+        "description": "A cherished family-friendly destination known for its free-roaming rabbits and variety of farm animals. Established in 1966 the park was designed as a sanctuary where urban children could interact with domestic animals in a natural setting.",
+        "imageName": "bunny-park"
+    },
+    {
+        "name": "Lapeng Village",
+        "address": "30381 Sigalo St, Daveyton, Benoni, 1507",
+        "description": "A Guest ouse that offers comfortable accommodation in the township of Daveyton. offers conference, wedding and event facilities comprising a boardroom and an amphitheatre. Various packages are offered, and Lapeng Village can comfortably accommodate between 20 to 100 people",
+        "imageName": "lapeng-village"
+    },
+    {
+        "name": "Sinaba Stadium",
+        "address": "5547 Eiselen St, Daveyton, Benoni, 1520",
+        "description": "a multi-use stadium in Benoni, South Africa. It is currently used mostly for football matches and was the home ground of Benoni Premier United. The stadium holds 15,000 people",
+        "imageName": "sinaba-stadium"
+    },
+    {
+        "name": "Benoni Museum",
+        "address": " 60 Elston Ave, Benoni, 1500",
+        "description": "Established in 199, this is an historical museum which represents the history of Benoni, the mining sector, African musical instruments and basic African households’ necessities",
+        "imageName": "benoni-museum"
+    }
+]

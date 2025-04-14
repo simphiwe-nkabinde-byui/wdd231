@@ -97,4 +97,41 @@
         font-size: 1rem;
     }
 
+    #interest-areas li figure img:hover {
+        opacity: .7;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    #interest-areas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #interest-areas li {
+        row-gap: .5rem;
+        column-gap: 1rem;
+        grid-template-areas:
+            "image name"
+            "image address"
+            "image description"
+            "image button"
+        ;
+    }
+
+    #interest-areas li h2 {
+        margin-top: .8rem;
+    }
+
+    #interest-areas li button {
+        height: 2rem;
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    #interest-areas li figure img {
+        height: 100%;
+        width: auto;
+        transition: 0.1s ease-in-out;
+    }
 }
