@@ -29,7 +29,7 @@ function renderPlaceCards(data) {
 
         // figure
         const figure = document.createElement('figure');
-        figure.innerHTML = `<img src="images/${item.imageName}.webp" width="300" height="200" alt="${item.name}">`;
+        figure.innerHTML = `<img loading=-"lazy" src="images/${item.imageName}.webp" width="300" height="200" alt="${item.name}">`;
         li.append(figure)
 
         // address
