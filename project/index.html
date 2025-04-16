@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Bird Wonder Hub site">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <title>Welcome | Bird Wonder Hub</title>
+    <meta property="og:title" content="Bird Wonder Hub Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://unsplash.com/photos/yellow-bird-on-sakura-tree-RLLR0oRz16Y">
+    <meta property="og:url" content="https://simphiwe-nkabinde-byui.github.io/wdd231/project">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/birds.js" defer></script>
+    <script src="scripts/visit-date.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/logo.webp" width="50" height="50" loading="lazy" alt="logo">
+            <span class="title">Bird Wonder Hub</span>
+        </div>
+
+        <button id="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="icon-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="icon-x"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </button>
+        <nav id="navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div id="alert-box"></div>
+        <section id="hero-container">
+            <img loading="lazy" srcset="images/hero-500.webp 500w, 
+                        images/hero-800.webp 800w, 
+                        images/hero-1280.webp 1280w" src="images/hero-1280.webp" sizes="(max-width: 500px) 500px,
+                        (max-width: 800px) 800px,
+                        (max-width: 1280px) 1280px" alt="bird in nature">
+            <div class="hero-content">
+                <h1>Welcome to Bird Wonder Hub</h1>
+                <a href="gallery.html" class="cta-btn">Checkout our gallery</a>
+            </div>
+        </section>
+        <p class="intro">Learn about different birds found around the world</p>
+        <section>
+            <h2>Search & Filter</h2>
+            <form id="filters-form" method="GET" action="/project/index.html">
+                <label>
+                    Bird Name
+                    <input type="search" id="bird-search" name="birdname" placeholder="eagle">
+                </label>
+                <label>
+                    Regions
+                    <select name="birdregion" id="bird-region"></select>
+                </label>
+                <div class="actions">
+                    <button class="btn">Search/Filter</button>
+                    <a class="btn" href="/project//index.html">Clear</a>
+                </div>
+            </form>
+            <h2 id="results">Results</h2>
+            <ul id="bird-list"></ul>
+        </section>
+        <dialog></dialog>
+    </main>
+    <footer>
+        <p class="dev-info">&copy; 2025 bird wonder hub</p>
+        <a href="attributions.html">Attributions</a>
+    </footer>
+</body>
+
+</html>
