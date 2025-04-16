@@ -5,7 +5,7 @@ const alertBox = document.querySelector('#alert-box');
 if (messageSeen == null) {
     let message = ''
     if (lastVisit == null) {
-        message = 'Welcome! Let us know if you have any questions.';
+        message = 'Welcome to Bird Wonder Hub!';
                 
     } else if (Date.now() - lastVisit < (1000 * 60 * 60 * 24)) {
         message = 'Back so soon! Awesome!';
