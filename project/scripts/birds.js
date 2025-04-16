@@ -40,8 +40,6 @@ function renderBirdList(birds) {
     
     results.textContent = `${filtered.length} results`
     filtered.forEach(bird => {
-        console.log(bird);
-        
         const card = document.createElement('li');
         card.innerHTML = `
             <p class='title'>${bird.name}</p>
