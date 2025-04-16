@@ -1,3 +1,5 @@
+import extractCountries from "./extractCountries.mjs";
+
 const select = document.querySelector('#bird-region')
 const search = document.querySelector('#bird-search')
 const list = document.querySelector('#bird-list');
@@ -16,12 +18,6 @@ async function displayBirds(params) {
     } catch (error) {
         console.log(error);
     }
-}
-
-function getCountries(birds) {
-    const allCountries = birds.map(bird => bird.place_of_found)
-    let uniqueCountries = allCountries.filter((e, i, self) => i === self.findIndex((item) => item === e));
-    return uniqueCountries
 }
 
 function renderBirdList(birds) {
@@ -100,7 +96,7 @@ function renderBirdList(birds) {
 function renderBirdRegionOptions(birds) {
     const selectedRegion = searchParams.get('birdregion')
     const searchName = searchParams.get('birdname')
-    const countries = getCountries(birds);
+    const countries = extractCountries(birds);
     search.value = searchName
     select.innerHTML = '<option value="">select region</option>' + countries.map(i => (
         `<option ${selectedRegion == i ? 'selected' : ''} value='${i}'>${i}</option>`
